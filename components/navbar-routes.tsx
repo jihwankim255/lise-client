@@ -9,7 +9,7 @@ import {Button} from '@/components/ui/button'
 import {isTeacher} from '@/lib/teacher'
 
 import {SearchInput} from './search-input'
-//Todo 주석 해제
+
 export const NavbarRoutes = () => {
   const {userId} = useAuth()
   const pathname = usePathname()
@@ -21,7 +21,9 @@ export const NavbarRoutes = () => {
   return (
     <>
       {isSearchPage && (
-        <div className="hidden md:block">{/* <SearchInput /> */}</div>
+        <div className="hidden md:block">
+          <SearchInput />
+        </div>
       )}
       <div className="flex gap-x-2 ml-auto">
         {isTeacherPage || isCoursePage ? (
